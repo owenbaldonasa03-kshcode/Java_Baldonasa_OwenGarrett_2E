@@ -31,4 +31,22 @@ public class StudentRecord {
             }
 
             // Display results
-            System.out.println("\n--- Student
+            System.out.println("\n--- Student ---");
+            System.out.println({"Name    : " + name);
+            System.out.println("Age      : " + age);
+            System.out.printtf("Average : %.2f%n" , average);
+            System.out.println("Status  : " + status);
+            System.out.println("-----------------------");
+
+            // Ask whether to continue
+            System.out.print("\nEnter another student? (Y/N): ");
+            choice = input.next().charAt(0);
+            input.nextline(); // clear leftover newline from the buffer
+            System.out.println();
+
+        } while (choice == 'Y'  || choice == 'y');
+
+        System.out.println("Program ended. Thank you!");
+        input.close();
+    }
+ }
