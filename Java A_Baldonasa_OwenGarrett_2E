@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class StudentRecord {
     public static void main(String[] args) {
-        Scanner input = new Scanner (System.in)
+        Scanner input = new Scanner(System.in);
         char choice;
 
         do {
             // Input student information
             System.out.print("Enter student name: ");
-            String name = input.nextline();
+            String name = input.nextLine();
 
             System.out.print("Enter age: ");
             int age = input.nextInt();
@@ -23,30 +23,33 @@ public class StudentRecord {
             double net2 = input.nextDouble();
 
             // Calculate average
+            double average = (hci + cc103 + net2) / 3;
+
+            // Determine academic status
             String status;
             if (average >= 75) {
                 status = "PASSED";
-            } else { 
+            } else {
                 status = "FAILED";
             }
 
             // Display results
-            System.out.println("\n--- Student ---");
-            System.out.println({"Name    : " + name);
-            System.out.println("Age      : " + age);
-            System.out.printtf("Average : %.2f%n" , average);
+            System.out.println("\n--- Student Record ---");
+            System.out.println("Name    : " + name);
+            System.out.println("Age     : " + age);
+            System.out.printf("Average : %.2f%n", average);
             System.out.println("Status  : " + status);
-            System.out.println("-----------------------");
+            System.out.println("----------------------");
 
             // Ask whether to continue
             System.out.print("\nEnter another student? (Y/N): ");
             choice = input.next().charAt(0);
-            input.nextline(); // clear leftover newline from the buffer
+            input.nextLine(); // clear leftover newline from the buffer
             System.out.println();
 
-        } while (choice == 'Y'  || choice == 'y');
+        } while (choice == 'Y' || choice == 'y');
 
         System.out.println("Program ended. Thank you!");
         input.close();
     }
- }
+}
