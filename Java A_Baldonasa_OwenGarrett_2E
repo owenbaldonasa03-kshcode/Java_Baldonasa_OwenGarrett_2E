@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class StudentRecord {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in)
+        char choice;
+
+        do {
+            // Input student information
+            System.out.print("Enter student name: ");
+            String name = input.nextline();
+
+            System.out.print("Enter age: ");
+            int age = input.nextInt();
+
+            System.out.print("Enter HCI score: ");
+            double hci = input.nextDouble();
+
+            System.out.print("Enter CC103 score: ");
+            double cc103 = input.nextDouble();
+
+            System.out.print("Enter NET2 score: ");
+            double net2 = input.nextDouble();
+
+            // Calculate average
+            String status;
+            if (average >= 75) {
+                status = "PASSED";
+            } else { 
+                status = "FAILED";
+            }
+
+            // Display results
+            System.out.println("\n--- Student
